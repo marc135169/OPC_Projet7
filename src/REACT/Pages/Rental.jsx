@@ -1,18 +1,19 @@
-import {useParams} from 'react-router-dom';
 import Data from "../../Data/data.json";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faStar} from "@fortawesome/free-solid-svg-icons";
 import Collapse from "../Components/Collapse.jsx";
 import Carousel from "../Components/Carousel.jsx";
+import NotFound from "./NotFound.jsx";
+import {useParams} from "react-router-dom";
 
 
 export default function Rental() {
     const {id} = useParams();
     const rental = Data.find(item => item.id === id);    
-/* Le hook useNavigate de react rooterDOM, if ID n'existe pas => 404*/
+ 
 
     if (!rental) {
-        return <h2>Logement non trouvé</h2>;
+        return <NotFound />;
     }
 
     const {title, pictures, location, tags, rating, host, description, equipments} = rental;
