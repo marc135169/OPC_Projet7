@@ -3,7 +3,6 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faStar} from "@fortawesome/free-solid-svg-icons";
 import Collapse from "../components/Collapse.jsx";
 import Carousel from "../components/Carousel.jsx";
-/*import NotFound from "./NotFound.jsx";*/
 import {useNavigate, useParams} from "react-router-dom";
 import {useEffect} from "react";
 
