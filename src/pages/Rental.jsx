@@ -41,7 +41,7 @@ export default function Rental() {
                     <div className="flex gap-2 flex-wrap mt-2">
                         {tags.map((tag, index) => (
                             <div key={index} className="bg-[#FF6060] text-white text-center text-[10px] font-bold rounded-[5px] w-[100px] h-[18px] flex justify-center items-center text-nowrap
-                                                        1xl:w-[115px] 1xl:h-[25px] 1xl:text-[14px]">
+                                                        1xl:w-[145px] 1xl:h-[25px] 1xl:text-[14px]">
                                 {tag}
                             </div>
                         ))}
