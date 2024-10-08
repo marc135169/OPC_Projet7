@@ -21,7 +21,7 @@ export default function Rental() {
    
 
     return (
-        <div className="rental-details mx-5 mt-5 gap-[22px] flex flex-col 
+        <div className="rental-details mx-5 mt-5 gap-[22px] flex flex-col
                         1xl:mx-[120px]">
 
             {/* Carourou */}
@@ -33,12 +33,13 @@ export default function Rental() {
                     <div className="titleRental">
                         <h1 className="text-[18px] font-medium text-red-500
                                         1xl:text-[36px]">{title}</h1>
-                        <p className="text-black text-[14px] font-medium mt-[22px]
+                        <p className="text-black text-[14px] font-medium mt-[5px]
                                         1xl:text-[18px]">{location}</p>
                     </div>
         
                     {/* Tags */}
-                    <div className="flex gap-2 flex-wrap mt-2">
+                    <div className="flex gap-2 flex-wrap mt-3 mb-3
+                                    1xl:mt-3 1xl:mb-0">
                         {tags.map((tag, index) => (
                             <div key={index} className="bg-[#FF6060] text-white text-center text-[10px] font-bold rounded-[5px] w-[100px] h-[18px] flex justify-center items-center text-nowrap
                                                         1xl:w-[145px] 1xl:h-[25px] 1xl:text-[14px]">
