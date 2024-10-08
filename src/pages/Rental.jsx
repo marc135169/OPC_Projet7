@@ -3,26 +3,33 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faStar} from "@fortawesome/free-solid-svg-icons";
 import Collapse from "../components/Collapse.jsx";
 import Carousel from "../components/Carousel.jsx";
-import NotFound from "./NotFound.jsx";
-import {useParams} from "react-router-dom";
+/*import NotFound from "./NotFound.jsx";*/
+import {useNavigate, useParams} from "react-router-dom";
+import {useEffect} from "react";
 
 
 export default function Rental() {
     const {id} = useParams();
-    const rental = Data.find(item => item.id === id);    
- 
+    const navigate = useNavigate();
+    const rental = Data.find(item => item.id === id);
 
+    useEffect(() => {
+        if (!rental) {
+            navigate("/not-found", { replace: true });
+        }
+    }, [rental, navigate]);
+    
     if (!rental) {
-        return <NotFound />;
+        return null;
     }
-
+    
     const {title, pictures, location, tags, rating, host, description, equipments} = rental;
 
    
 
     return (
         <div className="rental-details mx-5 mt-5 gap-[22px] flex flex-col
-                        1xl:mx-[120px]">
+                        1xl:mx-[120px] 1xl:my-12">
 
             {/* Carourou */}
             
@@ -39,7 +46,7 @@ export default function Rental() {
         
                     {/* Tags */}
                     <div className="flex gap-2 flex-wrap mt-3 mb-3
-                                    1xl:mt-3 1xl:mb-0">
+                                    1xl:mt-4 1xl:mb-0">
                         {tags.map((tag, index) => (
                             <div key={index} className="bg-[#FF6060] text-white text-center text-[10px] font-bold rounded-[5px] w-[100px] h-[18px] flex justify-center items-center text-nowrap
                                                         1xl:w-[145px] 1xl:h-[25px] 1xl:text-[14px]">
@@ -70,7 +77,7 @@ export default function Rental() {
 
             {/* Collapse */}
             <div className="flex flex-col gap-2
-                            1xl:grid  1xl:grid-cols-2 1xl:gap-10">                
+                            1xl:grid  1xl:grid-cols-2 1xl:gap-10 1xl:mt-5">                
                 <Collapse title='Description' content={description} />
                 <Collapse title='Équipements' content={<ul> {equipments.map( (item, index) => <li key={index}>{item}</li>)}</ul>}/>
             </div>
