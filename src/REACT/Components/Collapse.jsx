@@ -2,7 +2,9 @@ import PropTypes from "prop-types";
 import {useEffect, useRef, useState} from "react";
 
 const Collapse = (props) => {
-
+    
+    
+    
     const [isOpen, setIsOpen] = useState(false);
     const [height, setHeight] = useState("0px");
     const contentRef = useRef(null);
@@ -13,7 +15,8 @@ const Collapse = (props) => {
 
     useEffect(() => {
         if (isOpen) {
-            setHeight(`${contentRef.current.scrollHeight}px`);
+            if (contentRef.current)
+                setHeight(`${contentRef.current.scrollHeight}px`);
         } else {
             setHeight("0px");
         }

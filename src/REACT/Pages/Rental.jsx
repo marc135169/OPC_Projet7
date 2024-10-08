@@ -9,7 +9,7 @@ import Carousel from "../Components/Carousel.jsx";
 export default function Rental() {
     const {id} = useParams();
     const rental = Data.find(item => item.id === id);    
-
+/* Le hook useNavigate de react rooterDOM, if ID n'existe pas => 404*/
 
     if (!rental) {
         return <h2>Logement non trouvé</h2>;
@@ -51,7 +51,7 @@ export default function Rental() {
                 <div className="flex justify-between items-center
                                 1xl:flex-col-reverse 1xl:items-end">
                     <div className="flex items-center">                    
-                        {[...Array(5)].map((star, index) => (
+                        {[...Array(5)].map((star, index) => (                            
                             <div key={index} className={index < rating ? "text-[#FF6060]" : "text-gray-300"}>
                                 <FontAwesomeIcon icon={faStar} size="1x" className='1xl:text-[24px]' />                            
                             </div>                        
