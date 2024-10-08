@@ -1,8 +1,8 @@
-import Data from "../../Data/data.json";
+import Data from "../Data/data.json";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faStar} from "@fortawesome/free-solid-svg-icons";
-import Collapse from "../Components/Collapse.jsx";
-import Carousel from "../Components/Carousel.jsx";
+import Collapse from "../components/Collapse.jsx";
+import Carousel from "../components/Carousel.jsx";
 import NotFound from "./NotFound.jsx";
 import {useParams} from "react-router-dom";
 

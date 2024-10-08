@@ -1,21 +1,10 @@
-import '../assets/index.css'
-/*import {StrictMode} from 'react'
-import {createRoot} from 'react-dom/client'
-import App from "./App.jsx";
-
-
-createRoot(document.getElementById('root')).render(    
-    <StrictMode>
-        <App />
-    </StrictMode>,
-)*/
-
+import './assets/index.css'
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
-import Home from "./Pages/Home.jsx";
-import Rental from "./Pages/Rental.jsx";
-import About from "./Pages/About.jsx";
-import NotFound from "./Pages/NotFound.jsx";
+import Home from "./pages/Home.jsx";
+import Rental from "./pages/Rental.jsx";
+import About from "./pages/About.jsx";
+import NotFound from "./pages/NotFound.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([

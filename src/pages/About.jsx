@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
-import Banner from "../Components/Common/Banner.jsx";
-import Collapse from "../Components/Collapse.jsx";
+import Banner from "../components/Common/Banner.jsx";
+import Collapse from "../components/Collapse.jsx";
 
 export default function About() {
     

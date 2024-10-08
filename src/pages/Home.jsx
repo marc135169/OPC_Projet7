@@ -1,6 +1,6 @@
-import Banner from '../Components/Common/Banner';
-import Gallery from '../Components/Gallery';
-import Data from '../../Data/data.json';
+import Banner from '../components/Common/Banner.jsx';
+import Gallery from '../components/Gallery.jsx';
+import Data from '../Data/data.json';
 
 /*import Image from '../../assets/img/mer.png';*/
 
