@@ -23,7 +23,7 @@ const Collapse = (props) => {
     }, [isOpen]);
 
     return (
-        <div className="mb-4">            
+        <div className="mb-4">
             <div
                 onClick={toggleCollapse}
                 className="cursor-pointer h-[30px] bg-red-400 text-white p-3 rounded-[5px] flex justify-between items-center z-1 relative
@@ -31,15 +31,18 @@ const Collapse = (props) => {
             >
                 <h3 className="text-[13px] font-bold
                                  1xl:text-[24px]">{props.title}</h3>
-                <div className=''>{isOpen ?
-                    <img src="/img/arrow_down.png" alt="" className='w-4 h-[10px]'/> :
-                    <img src="/img/arrow_upward.png" alt=""/>}
+                <div>
+                    <img
+                        src="/img/arrow_upward.png"
+                        alt=""
+                        className={`w-4 h-[10px] transition-transform duration-300 ease-in-out ${isOpen ? 'rotate-180' : 'rotate-0'}`}
+                    />
                 </div>
             </div>
-            
+
             <div
                 ref={contentRef}
-                style={{ height, transition: "height 0.3s ease" }}
+                style={{height, transition: "height 0.3s ease"}}
                 className="overflow-hidden bg-[#F6F6F645] mt-[-5px] z-0 rounded-[5px] "
             >
                 <div className="p-4 text-[13px]
