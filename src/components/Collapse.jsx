@@ -31,7 +31,9 @@ const Collapse = (props) => {
     }, [isOpen]);
 
     return (
-        <div className="mb-4 1xl:w-[100%] self-center md:w-[80vw]">
+        <div className="mb-4 self-center w-[100%]        
+                        1xl:w-[100%]        
+                        md:w-[80vw]">
             <div
                 onClick={toggleCollapse}
                 className="cursor-pointer h-[30px] bg-red-400 text-white p-3 rounded-[5px] flex justify-between items-center z-1 relative
