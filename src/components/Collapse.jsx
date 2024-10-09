@@ -1,6 +1,14 @@
 import PropTypes from "prop-types";
 import {useEffect, useRef, useState} from "react";
 
+
+/**
+ * Initially, the content is hidden and can be revealed by clicking the title.
+ * @param props
+ * @return {JSX.Element}
+ * @constructor
+ * 
+ */
 const Collapse = (props) => {
     
     
@@ -23,7 +31,7 @@ const Collapse = (props) => {
     }, [isOpen]);
 
     return (
-        <div className="mb-4">
+        <div className="mb-4 1xl:w-[100%] self-center md:w-[80vw]">
             <div
                 onClick={toggleCollapse}
                 className="cursor-pointer h-[30px] bg-red-400 text-white p-3 rounded-[5px] flex justify-between items-center z-1 relative

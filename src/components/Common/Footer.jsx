@@ -1,7 +1,7 @@
 export default function Footer(){
     return (
         <div className="bg-black flex justify-center mt-[27px]
-                        1xl:w-full">
+                        w-[100vw]">
             <div className= 'flex flex-col justify-center items-center h-[209px] text-center
                             1xl:w-[1440px]' >
                 <img src="/img/LOGOlogoBW.png" alt="Kasa's logo" className='w-[122px] h-[39px]'/>

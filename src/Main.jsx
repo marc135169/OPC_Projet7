@@ -7,6 +7,7 @@ import About from "./pages/About.jsx";
 import NotFound from "./pages/NotFound.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
+
 const router = createBrowserRouter([
     {
         element: <App />,

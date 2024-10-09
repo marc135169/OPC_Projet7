@@ -9,8 +9,42 @@
     /*outline: red 1px solid;*/
     font-family: 'Montserrat', sans-serif;
 }
-body, header{
+body{
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center;     
+}
+
+#root{    
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.banner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 335px;
+    height: 111px;
+    margin: 27px 20px 0 20px;
+    border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+    .banner {
+        width: 90vw;
+    }
+}
+
+@media (min-width: 1440px) {
+    .banner {
+        width: 75rem;
+        height: 223px;
+        margin: 2rem 7.5rem;
+        justify-content: center;
+        
+    }
 }

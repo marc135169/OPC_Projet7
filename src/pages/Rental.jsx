@@ -6,7 +6,11 @@ import Carousel from "../components/Carousel.jsx";
 import {useNavigate, useParams} from "react-router-dom";
 import {useEffect} from "react";
 
-
+/**
+ * @description 
+ * @return {JSX.Element|null} - rental details if found, if not => 404
+ * @constructor
+ */
 export default function Rental() {
     const {id} = useParams();
     const navigate = useNavigate();
@@ -28,7 +32,8 @@ export default function Rental() {
 
     return (
         <div className="rental-details mx-5 mt-5 gap-[22px] flex flex-col
-                        1xl:mx-[120px] 1xl:my-12">
+                        md:w-[90vw]
+                        1xl:mx-[120px] 1xl:my-12 1xl:w-[1200px]">
 
             {/* Carourou */}
             
@@ -76,8 +81,8 @@ export default function Rental() {
 
             {/* Collapse */}
             <div className="flex flex-col gap-2
-                            1xl:grid  1xl:grid-cols-2 1xl:gap-10 1xl:mt-5">                
-                <Collapse title='Description' content={description} />
+                            1xl:grid  1xl:grid-cols-2 1xl:gap-10 1xl:mt-5 1xl:w-full">
+                <Collapse title='Description' content={description}/>
                 <Collapse title='Équipements' content={<ul> {equipments.map( (item, index) => <li key={index}>{item}</li>)}</ul>}/>
             </div>
 

@@ -30,8 +30,8 @@ export default function About() {
     return(
         <>
         <Banner image={'/img/montagne.png'}/>
-        <div className="mt-5 mx-5 flex flex-col gap-2 justify-center
-                        1xl:mx-[200px] 1xl:mt-10">
+        <div className="mt-5 mx-5 flex flex-col gap-2 justify-center item-center
+                        1xl:mx-[200px] 1xl:mt-10 1xl:w-[1050px]">
             {aboutList.map((item, index) => (
                 <Collapse title={item.title} content={item.content} key={index} />
             ))}

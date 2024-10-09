@@ -1,6 +1,13 @@
 import {useState} from "react";
 import PropTypes from "prop-types";
 
+
+/**
+ * @description Allows the user to navigate through the images using "Next" and "Previous" buttons.
+ * @param props
+ * @return {JSX.Element}
+ * @constructor
+ */
 export default function Carousel(props) {
 
     const [currentIndex, setCurrentIndex] = useState(0);

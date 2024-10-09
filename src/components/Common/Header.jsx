@@ -8,8 +8,9 @@ function underline ({isActive}) {
 export default function Header(){   
     
     return (        
-    <div className="flex flex-row justify-between mt-5 mx-5 h-[46px] 
-                    1xl:h-[68px] 1xl:mx-[120px] 1xl:mt-8" >
+    <div className="flex flex-row justify-between mt-5 mx-5 h-[46px] w-[335px]
+                    md:w-[90vw]
+                    1xl:h-[68px] 1xl:mx-[120px] 1xl:mt-8 1xl:w-[1200px] " >
         <Link to='/'>
             <img src="/img/LOGOLogo_Kasa.png" alt="kasa's logo" className='1xl:w-[210px] 1xl:h-[68px]'/> 
         </Link>
